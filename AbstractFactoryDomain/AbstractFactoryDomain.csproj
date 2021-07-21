@@ -59,6 +59,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>COPY "$(SolutionDir)AbstractFactoryDomain\$(OutDir)AbstractFactoryDomain.dll" "$(SolutionDir)AbstractFactoryConsole\bin\Debug"</PostBuildEvent>
+    <PostBuildEvent>COPY "$(ProjectDir)$(OutDir)AbstractFactoryDomain.dll" "$(SolutionDir)AbstractFactoryConsole\bin\$(Configuration)"</PostBuildEvent>
   </PropertyGroup>
 </Project>
