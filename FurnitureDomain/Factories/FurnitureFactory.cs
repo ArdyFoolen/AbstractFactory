@@ -21,9 +21,20 @@ namespace FurnitureDomain.Factories
 
     public abstract class FurnitureFactory
     {
-        public abstract IChair CreateChair();
-        public abstract ICoffeeTable CreateCoffeeTable();
-        public abstract ISofa CreateSofa();
+        public virtual IChair CreateChair()
+        {
+            return new FurnitureNullObject();
+        }
+
+        public virtual ICoffeeTable CreateCoffeeTable()
+        {
+            return new FurnitureNullObject();
+        }
+
+        public virtual ISofa CreateSofa()
+        {
+            return new FurnitureNullObject();
+        }
 
         public static string[] AvailableFactories()
         {

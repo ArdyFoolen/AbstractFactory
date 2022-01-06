@@ -15,10 +15,11 @@ namespace FurnitureDomain.Factories
             return new VictorianChair();
         }
 
-        public override ICoffeeTable CreateCoffeeTable()
-        {
-            return new VictorianCoffeeTable();
-        }
+        // Uncomment if you do not want to use the FurnitureNullObject
+        //public override ICoffeeTable CreateCoffeeTable()
+        //{
+        //    return new VictorianCoffeeTable();
+        //}
 
         public override ISofa CreateSofa()
         {
