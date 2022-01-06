@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="COPY &quot;$(ProjectDir)$(OutDir)FurnitureDomain.dll&quot; &quot;$(SolutionDir)FurnitureConsole\Deploy&quot;" />
+  </Target>
+
+</Project>

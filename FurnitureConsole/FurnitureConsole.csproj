@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FurnitureDomain\FurnitureDomain.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="COPY &quot;$(ProjectDir)$(OutDir)FurnitureConsole.dll&quot; &quot;$(SolutionDir)FurnitureConsole\Deploy&quot;&#xD;&#xA;COPY &quot;$(ProjectDir)$(OutDir)FurnitureConsole.exe&quot; &quot;$(SolutionDir)FurnitureConsole\Deploy&quot;&#xD;&#xA;COPY &quot;$(ProjectDir)$(OutDir)FurnitureConsole.runtimeconfig.json&quot; &quot;$(SolutionDir)FurnitureConsole\Deploy&quot;" />
+  </Target>
+
+</Project>
